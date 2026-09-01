@@ -1,0 +1,11 @@
+name: ecommerce
+region: nyc
+static_sites:
+  - name: web
+    source_dir: .
+    build_command: npm ci && npm run build
+    output_dir: dist
+    routes:
+      - path: /
+        index_document: index.html
+        error_document: index.html
